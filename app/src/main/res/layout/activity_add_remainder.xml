@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8C9D9"
+    tools:context=".AddRemainder">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Add Reminder"
+        android:textColor="#3E1C7C"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="69dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="44dp"
+        android:text="Title"
+        android:textColor="#052522"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.78" />
+
+    <EditText
+        android:id="@+id/titleT"
+        android:layout_width="163dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="Add title"
+        android:inputType="textPersonName"
+        android:textColor="#0B0E0E"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/descT"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/descT"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="114dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="24dp"
+        android:text="Description"
+        android:textColor="#120101"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/dateB"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/dateB"
+        app:layout_constraintTop_toBottomOf="@+id/titleT" />
+
+    <EditText
+        android:id="@+id/descT"
+        android:layout_width="155dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="64dp"
+        android:ems="10"
+        android:hint="Add Description"
+        android:inputType="textMultiLine|textPersonName"
+        android:textColor="#0B0E0E"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/SubmitB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:onClick="submitClick"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarB" />
+
+    <Button
+        android:id="@+id/dateB"
+        android:layout_width="141dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="248dp"
+        android:onClick="buttonClick"
+        android:text="Select Date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descT" />
+
+    <Button
+        android:id="@+id/timeB"
+        android:layout_width="137dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="32dp"
+        android:onClick="timeClicked"
+        android:text="Select Time"
+        app:layout_constraintEnd_toEndOf="@+id/dateB"
+        app:layout_constraintEnd_toStartOf="@+id/timeT"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/dateB"
+        app:layout_constraintTop_toBottomOf="@+id/dateB" />
+
+    <EditText
+        android:id="@+id/dateT"
+        android:layout_width="127dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/dateB"
+        app:layout_constraintEnd_toEndOf="@+id/descT"
+        app:layout_constraintStart_toEndOf="@+id/dateB" />
+
+    <EditText
+        android:id="@+id/timeT"
+        android:layout_width="130dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="68dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/timeB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/timeB"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/ClearB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:onClick="clearClick"
+        android:text="Clear"
+        app:layout_constraintBottom_toBottomOf="@+id/SubmitB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toEndOf="@+id/SubmitB"
+        app:layout_constraintTop_toBottomOf="@+id/timeB"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/calendarB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:onClick="calenderBtnClick"
+        android:text="Open Calendar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeB" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
